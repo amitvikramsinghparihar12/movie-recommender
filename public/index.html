@@ -7,28 +7,31 @@
   <meta name="description" content="Pick a movie you love and find similar ones, matched by genre, themes, cast, director and plot.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <h1>Pick a movie you love. See what to watch next.</h1>
-
-    <div class="search" role="search">
-      <label class="sr-only" for="movie-input">Movie title</label>
-      <input id="movie-input" type="text" autocomplete="off" spellcheck="false"
-             placeholder="Loading movies..." disabled
-             role="combobox" aria-expanded="false" aria-controls="suggestions" aria-autocomplete="list">
-      <ul id="suggestions" role="listbox" aria-label="Matching movies" hidden></ul>
-      <button id="surprise" type="button" disabled>Surprise me</button>
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="logo" href="#" data-home>NEXTWATCH</a>
+      <nav class="nav-links">
+        <a href="#" data-home>Home</a>
+        <a href="#genres" data-genres>Genres</a>
+      </nav>
+      <div class="search" role="search">
+        <label class="sr-only" for="movie-input">Search movies</label>
+        <input id="movie-input" type="text" autocomplete="off" spellcheck="false"
+               placeholder="Loading..." disabled
+               role="combobox" aria-expanded="false" aria-controls="suggestions" aria-autocomplete="list">
+        <ul id="suggestions" role="listbox" aria-label="Matching movies" hidden></ul>
+      </div>
     </div>
-    <p id="status" role="status"></p>
   </header>
 
-  <main id="result"></main>
+  <main id="view"></main>
 
-  <footer>
-    <p>Matches are based on genres, keywords, top cast, director and plot, using TF-IDF and cosine similarity.</p>
+  <footer class="wrap">
+    <p>Matches use genres, keywords, top cast, director and plot, compared with TF-IDF and cosine similarity.</p>
     <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
   </footer>
 
