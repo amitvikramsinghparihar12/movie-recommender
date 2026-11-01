@@ -1,5 +1,4 @@
-# Raw data and local caches (re-download from Kaggle if needed)
-data/
+
 # Python
 venv/
 .venv/
