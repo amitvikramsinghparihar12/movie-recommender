@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Next Watch: movie recommendations</title>
+  <meta name="description" content="Pick a movie you love and find similar ones, matched by genre, themes, cast, director and plot.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Pick a movie you love. See what to watch next.</h1>
+
+    <div class="search" role="search">
+      <label class="sr-only" for="movie-input">Movie title</label>
+      <input id="movie-input" type="text" autocomplete="off" spellcheck="false"
+             placeholder="Loading movies..." disabled
+             role="combobox" aria-expanded="false" aria-controls="suggestions" aria-autocomplete="list">
+      <ul id="suggestions" role="listbox" aria-label="Matching movies" hidden></ul>
+      <button id="surprise" type="button" disabled>Surprise me</button>
+    </div>
+    <p id="status" role="status"></p>
+  </header>
+
+  <main id="result"></main>
+
+  <footer>
+    <p>Matches are based on genres, keywords, top cast, director and plot, using TF-IDF and cosine similarity.</p>
+    <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
