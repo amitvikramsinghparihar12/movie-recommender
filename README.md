@@ -2,7 +2,7 @@ Next Watch: content-based movie recommender
 
 Pick a movie you like and get a list of similar ones. Recommendations are based on each movie's genres, keywords, top 3 cast, director and plot overview, compared with TF-IDF vectors and cosine similarity. The dataset is TMDB 5000 (4,800 movies after removing duplicate titles).
 
-Live demo: https://YOUR-PROJECT.vercel.app
+Live demo: https://movie-recommender-ashen-sigma.vercel.app/
 
 Features
 Search with suggestions and keyboard support (arrow keys, Enter, Escape)
